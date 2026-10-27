@@ -1,0 +1,1595 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الاستعداد للاختبارات المركزية للصف السادس الإبتدائي - Top Goal 3</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Cairo & Fredoka & Nunito -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;700;800;900&family=Fredoka:wght@500;600;700&family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        :root {
+            --olive-main: #6e8542;
+            --olive-dark: #4f622d;
+            --olive-light: #e9f0dc;
+            --orange-main: #cc5a24;
+            --orange-bright: #ff7a00;
+            --cream-bg: #f8faf4;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: var(--cream-bg);
+            background-image: radial-gradient(#6e854218 1.5px, transparent 1.5px);
+            background-size: 24px 24px;
+            overflow-x: hidden;
+        }
+
+        .font-en {
+            font-family: 'Nunito', sans-serif;
+        }
+
+        .font-en-display {
+            font-family: 'Fredoka', sans-serif;
+        }
+
+        /* 3D Stacked FULL MARK Text Style matching the uploaded badge */
+        .full-mark-top {
+            font-family: 'Fredoka', sans-serif;
+            font-weight: 700;
+            background: linear-gradient(180deg, #ffdf38 0%, #f59e0b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0px 1.5px 0px #ffffff) drop-shadow(2px 3.5px 0px #3a4720);
+            letter-spacing: 1.5px;
+        }
+
+        .full-mark-bottom {
+            font-family: 'Fredoka', sans-serif;
+            font-weight: 700;
+            background: linear-gradient(180deg, #ff7b1c 0%, #ea4c0f 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0px 1.5px 0px #ffffff) drop-shadow(2px 3.5px 0px #3a4720);
+            letter-spacing: 1.5px;
+        }
+
+        /* Notebook spiral effect for Welcome badge */
+        .notebook-Spiral {
+            background-image: radial-gradient(circle, #333 35%, transparent 40%);
+            background-size: 14px 18px;
+            background-repeat: repeat-y;
+        }
+
+        /* Card Active Speaking Animation */
+        .speaking-card {
+            transform: translateY(-6px) scale(1.02);
+            box-shadow: 0 20px 30px -10px rgba(204, 90, 36, 0.35), 0 0 0 4px #ff7a00 !important;
+        }
+
+        .word-highlight-active {
+            background-color: #fde047;
+            color: #9a3412 !important;
+            padding: 0 4px;
+            border-radius: 6px;
+            transition: all 0.15s ease;
+        }
+
+        /* Sound Wave Animation */
+        @keyframes soundWave {
+            0%, 100% { height: 6px; }
+            50% { height: 22px; }
+        }
+        .wave-bar {
+            width: 4px;
+            background-color: #ff7a00;
+            border-radius: 999px;
+            display: inline-block;
+            animation: soundWave 0.6s infinite ease-in-out;
+        }
+        .wave-bar:nth-child(2) { animation-delay: 0.15s; }
+        .wave-bar:nth-child(3) { animation-delay: 0.3s; }
+        .wave-bar:nth-child(4) { animation-delay: 0.45s; }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #e9f0dc;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #6e8542;
+            border-radius: 5px;
+        }
+
+        /* Flip Card for Flashcards mode */
+        .perspective-1000 {
+            perspective: 1000px;
+        }
+        .transform-style-3d {
+            transform-style: preserve-3d;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .backface-hidden {
+            backface-visibility: hidden;
+        }
+        .rotate-y-180 {
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col text-slate-800 select-none">
+
+    <!-- ==================== TOP BANNER (WITH LANGUA LEARN, FULL MARK & TEACHER NAME) ==================== -->
+    <header class="relative w-full bg-gradient-to-l from-[#6b8142] via-[#758c49] to-[#5d7137] border-b-4 border-[#4a5b2b] shadow-lg overflow-hidden">
+        <!-- Decorative diagonal cream ribbon on the left like the original image -->
+        <div class="hidden xl:block absolute -left-12 -top-10 w-80 h-52 bg-[#eef1c6] transform -rotate-25 border-r-8 border-[#7d9450] z-0"></div>
+
+        <div class="max-w-7xl mx-auto px-4 py-3.5 relative z-10 flex flex-col lg:flex-row items-center justify-between gap-4">
+            
+            <!-- Right Side (in RTL): Langua Learn Logo + Grade 6 Central Exam Title + Teacher Name -->
+            <div class="flex flex-col sm:flex-row items-center gap-4 text-center sm:text-right">
+                
+                <!-- LANGUA LEARN Official Logo Card (Exact recreation of uploaded logo) -->
+                <div class="bg-white px-3.5 py-2 rounded-2xl border-2 border-[#4a5b2b] shadow-md flex items-center gap-2.5 shrink-0 transform hover:scale-105 transition" dir="ltr">
+                    <!-- Geometric Coral Frame + Purple Graduation Cap SVG -->
+                    <svg class="w-12 h-12 shrink-0" viewBox="0 0 100 100" fill="none">
+                        <!-- Left & Top & Bottom Coral 3D Ribbon Frame -->
+                        <polygon points="8,6 32,6 32,94 8,94" fill="#ef8a6b"/>
+                        <polygon points="38,6 92,6 74,24 38,24" fill="#df7454"/>
+                        <polygon points="92,6 92,94 74,76 74,24" fill="#ef8a6b"/>
+                        <polygon points="8,94 68,94 64,76 32,76" fill="#df7454"/>
+                        <!-- Deep Purple Mortarboard Graduation Cap -->
+                        <polygon points="10,45 50,33 90,45 50,57" fill="#2c094d"/>
+                        <path d="M26,51 L26,67 C26,73 70,73 70,67 L70,51 L50,59 Z" fill="#461873"/>
+                        <!-- Cap Tassel -->
+                        <path d="M50,45 L73,50 L75,66" stroke="#2c094d" stroke-width="3.2" stroke-linecap="round" fill="none"/>
+                        <circle cx="75" cy="57" r="3" fill="#2c094d"/>
+                        <path d="M75,60 L79,69 L72,69 Z" fill="#2c094d"/>
+                    </svg>
+                    <!-- LANGUA LEARN Stacked Typography -->
+                    <div class="leading-none text-left">
+                        <div class="font-en font-black text-xl tracking-tight text-[#df7454]">LANGUA</div>
+                        <div class="font-en font-black text-xl tracking-tight text-[#3c096c] -mt-0.5">LEARN</div>
+                        <div class="font-en font-semibold text-[9px] tracking-wider text-[#e07a5f] mt-0.5">Learn, Grow, Succeed</div>
+                    </div>
+                </div>
+
+                <!-- Title & Teacher Majed Al-Suwaihri Badge -->
+                <div>
+                    <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2 mb-1.5">
+                        <span class="inline-flex items-center gap-1.5 bg-amber-400 text-slate-900 text-xs font-black px-3 py-0.5 rounded-full shadow-sm">
+                            <i class="fa-solid fa-star text-amber-700"></i>
+                            <span>الصف السادس الإبتدائي</span>
+                        </span>
+                        <span class="inline-flex items-center gap-1.5 bg-white/95 text-[#4f622d] border border-amber-300 text-xs sm:text-sm font-black px-3.5 py-0.5 rounded-full shadow-md">
+                            <i class="fa-solid fa-chalkboard-user text-[#cc5a24]"></i>
+                            <span>الأستاذ ماجد السويهري</span>
+                        </span>
+                    </div>
+                    <h1 class="text-2xl sm:text-3xl lg:text-4xl font-black text-white tracking-wide drop-shadow-[0_3px_3px_rgba(0,0,0,0.35)]">
+                        الاستعداد للاختبارات المركزية
+                    </h1>
+                </div>
+            </div>
+
+            <!-- Left Side: Stacked FULL MARK Badge + Top Goal 3 -->
+            <div class="flex items-center gap-3 sm:gap-5">
+                <!-- Hand-drawn arrow SVG -->
+                <svg class="hidden xl:block w-14 h-10 text-white/90" viewBox="0 0 100 50" fill="none">
+                    <path d="M95 25 C70 45, 50 5, 55 30 C60 45, 30 40, 10 25" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                    <path d="M18 18 L8 25 L18 32" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+
+                <!-- Stacked FULL MARK Logo Box (Matching uploaded image_c3e063.png) -->
+                <div class="bg-[#687d40] px-4 py-1.5 rounded-2xl border-2 border-[#4a5b2b] shadow-inner text-center flex flex-col items-center justify-center" dir="ltr">
+                    <span class="full-mark-top text-2xl sm:text-3xl leading-none block">FULL</span>
+                    <span class="full-mark-bottom text-2xl sm:text-3xl leading-none block -mt-0.5">MARK</span>
+                </div>
+
+                <!-- Top Goal 3 Badge & Globe Books -->
+                <div class="flex items-center gap-2 bg-[#eef1c6] text-slate-900 px-3.5 py-2 rounded-2xl border-2 border-[#4a5b2b] shadow-md transform -rotate-2 hover:rotate-0 transition">
+                    <div class="text-left" dir="ltr">
+                        <span class="font-en-display font-black text-lg sm:text-xl text-slate-800 block leading-none">Top Goal 3</span>
+                        <span class="text-[11px] font-bold text-[#5d7137] block">Welcome Unit</span>
+                    </div>
+                    <div class="w-10 h-10 flex items-center justify-center bg-sky-100 rounded-xl border border-sky-300">
+                        <i class="fa-solid fa-earth-americas text-2xl text-sky-600"></i>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- ==================== SUB-HEADER: WELCOME & VOCABULARY LIST BANNER ==================== -->
+    <section class="max-w-7xl mx-auto w-full px-4 pt-5 pb-2">
+        <div class="flex flex-col items-center justify-center">
+            <!-- Orange Notebook Tab "Welcome" + Teacher Credit Pill -->
+            <div class="flex flex-wrap items-center justify-center gap-3 mb-3">
+                <div class="relative bg-[#c45525] text-white px-8 py-1.5 rounded-xl shadow-md border-2 border-[#9e3f16] transform -rotate-1 flex items-center gap-3">
+                    <span class="font-en-display text-2xl sm:text-3xl font-bold tracking-wide bg-[#718944] px-4 py-0.5 rounded-lg border border-white/80 shadow-inner">
+                        Welcome
+                    </span>
+                    <!-- Spiral rings on the right edge -->
+                    <div class="flex flex-col gap-1.5 pr-1">
+                        <span class="w-3 h-1.5 bg-slate-800 rounded-full block"></span>
+                        <span class="w-3 h-1.5 bg-slate-800 rounded-full block"></span>
+                        <span class="w-3 h-1.5 bg-slate-800 rounded-full block"></span>
+                        <span class="w-3 h-1.5 bg-slate-800 rounded-full block"></span>
+                    </div>
+                </div>
+
+                <!-- Teacher Majed Al-Suwaihri Signature Ribbon -->
+                <div class="bg-gradient-to-l from-[#3c096c] to-[#5a189a] text-white px-4 py-2 rounded-xl shadow-md border-2 border-[#e07a5f] flex items-center gap-2">
+                    <i class="fa-solid fa-feather-pointed text-amber-300"></i>
+                    <span class="text-xs sm:text-sm font-black tracking-wide">إعداد الأستاذ: ماجد السويهري</span>
+                    <span class="text-[10px] font-en font-bold bg-[#e07a5f] text-white px-2 py-0.5 rounded-md">LANGUA LEARN</span>
+                </div>
+            </div>
+
+            <!-- Green Bar "Vocabulary list" -->
+            <div class="w-full max-w-4xl flex items-center justify-center gap-2 mb-4">
+                <div class="hidden sm:block h-10 flex-1 bg-gradient-to-l from-[#718944]/60 to-transparent rounded-r-xl border-y border-r border-[#4f622d]/40"></div>
+                <div class="bg-[#718944] text-white px-8 sm:px-16 py-2 rounded-xl border-2 border-[#3e4e22] shadow-md text-center">
+                    <h2 class="font-en-display text-2xl sm:text-3xl font-extrabold tracking-wider drop-shadow">
+                        Vocabulary list
+                    </h2>
+                    <p class="text-xs sm:text-sm text-lime-100 font-bold">قائمة المفردات الناطقة - اضغط على أي كلمة أو جملة للاستماع للنطق المتقن</p>
+                </div>
+                <div class="hidden sm:block h-10 flex-1 bg-gradient-to-r from-[#718944]/60 to-transparent rounded-l-xl border-y border-l border-[#4f622d]/40"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SMART AUDIO & MODE CONTROL BAR ==================== -->
+    <section class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-y-2 border-[#718944]/30 shadow-md py-2.5 px-4">
+        <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
+            
+            <!-- Navigation Tabs (Modes) -->
+            <div class="flex flex-wrap items-center gap-1.5 sm:gap-2">
+                <button onclick="switchTab('sheet')" id="tab-sheet" class="tab-btn bg-[#718944] text-white font-bold px-3.5 py-2 rounded-xl text-xs sm:text-sm flex items-center gap-2 shadow-sm transition">
+                    <i class="fa-solid fa-table-cells-large"></i>
+                    <span>الدرس المصور الناطق (12)</span>
+                </button>
+                <button onclick="switchTab('flashcards')" id="tab-flashcards" class="tab-btn bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold px-3.5 py-2 rounded-xl text-xs sm:text-sm flex items-center gap-2 transition">
+                    <i class="fa-solid fa-clone"></i>
+                    <span>بطاقات التسميع</span>
+                </button>
+                <button onclick="switchTab('listenGame')" id="tab-listenGame" class="tab-btn bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold px-3.5 py-2 rounded-xl text-xs sm:text-sm flex items-center gap-2 transition">
+                    <i class="fa-solid fa-headphones-simple"></i>
+                    <span>لعبة الاستماع السريع</span>
+                </button>
+                <button onclick="switchTab('exam')" id="tab-exam" class="tab-btn bg-amber-500 hover:bg-amber-600 text-white font-bold px-3.5 py-2 rounded-xl text-xs sm:text-sm flex items-center gap-2 shadow-sm transition">
+                    <i class="fa-solid fa-file-signature"></i>
+                    <span>الاختبار المركزي التجريبي</span>
+                </button>
+            </div>
+
+            <!-- Audio Controls & Speed & Auto-Play -->
+            <div class="flex flex-wrap items-center gap-2 sm:gap-3">
+                <!-- Auto Play All Button -->
+                <button id="btn-autoplay" onclick="toggleAutoPlayLesson()" class="bg-[#cc5a24] hover:bg-[#b04919] text-white font-bold px-4 py-2 rounded-xl text-xs sm:text-sm flex items-center gap-2 shadow transition active:scale-95">
+                    <i id="autoplay-icon" class="fa-solid fa-circle-play text-base"></i>
+                    <span id="autoplay-text">تشغيل الدرس كاملاً</span>
+                </button>
+
+                <!-- Speed Selector -->
+                <div class="flex items-center bg-slate-100 p-1 rounded-xl border border-slate-200 text-xs font-bold">
+                    <button onclick="setSpeed(1.0)" id="speed-normal" class="px-2.5 py-1 rounded-lg bg-[#718944] text-white transition">
+                        🚀 طبيعي 100%
+                    </button>
+                    <button onclick="setSpeed(0.68)" id="speed-slow" class="px-2.5 py-1 rounded-lg text-slate-600 hover:text-slate-900 transition">
+                        🐢 بطيء للتدريب
+                    </button>
+                </div>
+
+                <!-- British Native Pronunciation Badge -->
+                <div class="bg-slate-100 border border-slate-300 text-slate-800 text-xs font-bold rounded-xl px-3 py-2 flex items-center gap-1.5 shadow-sm">
+                    <span>🇬🇧 نطق بريطاني (UK Native)</span>
+                </div>
+
+                <!-- Progress Counter -->
+                <div class="hidden xl:flex items-center gap-2 bg-lime-50 border border-lime-300 px-3 py-1.5 rounded-xl">
+                    <span class="text-xs font-bold text-lime-900">تقدم الإتقان:</span>
+                    <span id="mastery-counter" class="font-en font-black text-sm text-[#718944]">0 / 12</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== NOW PLAYING FLOATING SPEAKER BAR ==================== -->
+    <div id="now-playing-bar" class="hidden fixed bottom-4 left-4 right-4 md:left-auto md:right-6 md:w-96 z-50 bg-slate-900/95 text-white p-3.5 rounded-2xl shadow-2xl border-2 border-amber-400 flex items-center justify-between gap-3">
+        <div class="flex items-center gap-3 overflow-hidden">
+            <div class="w-10 h-10 rounded-xl bg-amber-500/20 border border-amber-400 flex items-center justify-center gap-0.5 shrink-0">
+                <span class="wave-bar"></span>
+                <span class="wave-bar"></span>
+                <span class="wave-bar"></span>
+                <span class="wave-bar"></span>
+            </div>
+            <div class="overflow-hidden">
+                <div id="np-label" class="text-[11px] text-amber-300 font-bold">جاري النطق الآن...</div>
+                <div id="np-text" dir="ltr" class="font-en font-extrabold text-sm sm:text-base truncate text-left">I like eating cookies.</div>
+            </div>
+        </div>
+        <button onclick="stopAllAudio()" class="bg-red-500/20 hover:bg-red-500 text-red-200 hover:text-white px-3 py-1.5 rounded-xl text-xs font-bold transition shrink-0">
+            إيقاف
+        </button>
+    </div>
+
+    <!-- ==================== MAIN CONTENT CONTAINER ==================== -->
+    <main class="max-w-7xl mx-auto w-full px-4 py-6 flex-1">
+
+        <!-- ==================== TAB 1: WORKSHEET GRID (12 INTERACTIVE CARDS) ==================== -->
+        <div id="view-sheet" class="space-y-6">
+            
+            <!-- Quick Tip Banner for 6th Graders -->
+            <div class="bg-gradient-to-r from-amber-50 via-white to-lime-50 border-2 border-[#718944]/40 rounded-2xl p-3.5 flex flex-col sm:flex-row items-center justify-between gap-3 shadow-sm">
+                <div class="flex items-center gap-3">
+                    <span class="w-10 h-10 rounded-xl bg-[#cc5a24] text-white flex items-center justify-center text-lg shrink-0 shadow">
+                        <i class="fa-solid fa-volume-high"></i>
+                    </span>
+                    <div>
+                        <h3 class="font-extrabold text-sm sm:text-base text-slate-800">طريقة المذاكرة الذكية للاختبار المركزي:</h3>
+                        <p class="text-xs sm:text-sm text-slate-600">اضغط على <strong>الصورة أو الكلمة</strong> لسماع نطق المفردة، واضغط على <strong>الجملة في الأسفل</strong> لسماعها كاملة مع التظليل الصوتي المتزامن، أو جرب زر <strong>🎤 اختبر نطقك</strong>!</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-2 shrink-0">
+                    <button onclick="togglePhonetics()" id="btn-phonetics" class="bg-white hover:bg-slate-100 text-slate-700 border border-slate-300 px-3 py-1.5 rounded-xl text-xs font-bold transition shadow-sm">
+                        <i class="fa-solid fa-spell-check ml-1 text-[#cc5a24]"></i> إظهار الرموز الصوتية والنطق بالحروف
+                    </button>
+                </div>
+            </div>
+
+            <!-- The 4x3 Grid matching the exact image layout (dir="ltr" so 1->4 goes Left-to-Right like the English sheet) -->
+            <div id="cards-grid" dir="ltr" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                <!-- Cards injected dynamically via JS -->
+            </div>
+        </div>
+
+        <!-- ==================== TAB 2: INTERACTIVE FLASHCARDS ==================== -->
+        <div id="view-flashcards" class="hidden max-w-2xl mx-auto py-4">
+            <div class="bg-white rounded-3xl p-6 shadow-xl border-2 border-[#718944]/30 text-center space-y-6">
+                <div class="flex items-center justify-between border-b pb-3">
+                    <span class="font-bold text-slate-600 text-sm">بطاقات المراجعة والتسميع الذاتي</span>
+                    <span id="fc-counter" class="font-en font-black text-lg text-[#cc5a24]">1 / 12</span>
+                </div>
+
+                <!-- Flashcard Box -->
+                <div id="flashcard-box" class="relative bg-gradient-to-b from-slate-50 to-lime-50/50 rounded-3xl p-6 sm:p-8 border-2 border-slate-200 shadow-inner min-h-[340px] flex flex-col items-center justify-center gap-4">
+                    <div id="fc-illustration" class="w-44 h-36 flex items-center justify-center"></div>
+                    
+                    <div dir="ltr" class="space-y-1">
+                        <h3 id="fc-word" class="font-en text-4xl font-black text-[#cc5a24] tracking-wide">cookie</h3>
+                        <p id="fc-ipa" class="font-en text-sm text-slate-400 font-semibold">/ˈkʊk.i/</p>
+                    </div>
+
+                    <!-- Hidden/Revealed Meaning & Sentence -->
+                    <div id="fc-answer-area" class="w-full space-y-3 pt-2 border-t border-dashed border-slate-300">
+                        <div id="fc-meaning" class="text-2xl font-black text-slate-800">كوكيز / بسكويت</div>
+                        <div id="fc-sentence" dir="ltr" class="font-en text-lg font-bold text-slate-700 bg-white py-2 px-4 rounded-xl border border-slate-200 shadow-sm">
+                            I like eating <span class="text-[#cc5a24] font-black">cookies</span>.
+                        </div>
+                        <div id="fc-sentence-ar" class="text-xs font-bold text-slate-500">أنا أحب أكل الكوكيز (البسكويت).</div>
+                    </div>
+
+                    <!-- Audio Buttons inside Flashcard -->
+                    <div class="flex flex-wrap items-center justify-center gap-3 pt-2">
+                        <button onclick="speakCurrentFlashcardWord()" class="bg-[#cc5a24] hover:bg-[#b04919] text-white font-bold px-5 py-2.5 rounded-xl text-sm flex items-center gap-2 shadow transition">
+                            <i class="fa-solid fa-volume-high"></i> نطق الكلمة
+                        </button>
+                        <button onclick="speakCurrentFlashcardSentence()" class="bg-[#718944] hover:bg-[#5c7135] text-white font-bold px-5 py-2.5 rounded-xl text-sm flex items-center gap-2 shadow transition">
+                            <i class="fa-solid fa-comment-dots"></i> نطق الجملة
+                        </button>
+                        <button onclick="toggleFlashcardMeaning()" class="bg-slate-200 hover:bg-slate-300 text-slate-700 font-bold px-4 py-2.5 rounded-xl text-sm transition">
+                            <i class="fa-solid fa-eye-slash"></i> إخفاء/إظهار الترجمة
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Navigation Buttons -->
+                <div class="flex items-center justify-between gap-4">
+                    <button onclick="prevFlashcard()" class="flex-1 bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold py-3 rounded-2xl transition flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-arrow-right"></i> السابق
+                    </button>
+                    <button onclick="nextFlashcard()" class="flex-1 bg-[#718944] hover:bg-[#5b7034] text-white font-bold py-3 rounded-2xl shadow transition flex items-center justify-center gap-2">
+                        التالي <i class="fa-solid fa-arrow-left"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== TAB 3: LISTEN & MATCH GAME ==================== -->
+        <div id="view-listenGame" class="hidden max-w-4xl mx-auto py-4">
+            <div class="bg-white rounded-3xl p-6 shadow-xl border-2 border-[#718944]/30 space-y-6">
+                <div class="flex flex-wrap items-center justify-between gap-4 border-b pb-4">
+                    <div>
+                        <h3 class="text-xl font-black text-slate-800 flex items-center gap-2">
+                            <i class="fa-solid fa-headphones text-[#cc5a24]"></i>
+                            لعبة التحدي السمعي (Listen & Choose)
+                        </h3>
+                        <p class="text-xs sm:text-sm text-slate-500">استمع جيداً للكلمة أو الجملة الناطقة ثم اختر البطاقة الصحيحة بأسرع وقت!</p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="bg-amber-50 border border-amber-300 px-4 py-1.5 rounded-xl text-center">
+                            <span class="text-xs text-amber-800 font-bold block">النقاط</span>
+                            <span id="listen-score" class="font-en font-black text-xl text-amber-600">0</span>
+                        </div>
+                        <button onclick="startNewListenRound()" class="bg-[#cc5a24] hover:bg-[#b04919] text-white font-bold px-4 py-2.5 rounded-xl text-sm shadow transition">
+                            <i class="fa-solid fa-rotate"></i> سؤال صوتي جديد
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Giant Speaker Prompt -->
+                <div class="bg-gradient-to-r from-[#718944]/10 via-amber-50 to-[#718944]/10 rounded-2xl p-6 text-center space-y-4 border border-[#718944]/30">
+                    <p class="text-sm font-bold text-slate-600">اضغط للاستماع إلى السؤال الصوتي:</p>
+                    <div class="flex items-center justify-center gap-3">
+                        <button onclick="playListenGamePrompt(1.0)" class="bg-[#cc5a24] hover:bg-[#b04919] text-white font-black px-8 py-4 rounded-2xl text-lg shadow-lg flex items-center gap-3 transition transform hover:scale-105 active:scale-95">
+                            <i class="fa-solid fa-volume-high text-2xl animate-pulse"></i>
+                            <span>استمع للنطق (طبيعي)</span>
+                        </button>
+                        <button onclick="playListenGamePrompt(0.65)" class="bg-white hover:bg-slate-100 text-slate-700 border-2 border-slate-300 font-bold px-4 py-4 rounded-2xl text-sm shadow-sm flex items-center gap-2 transition">
+                            🐢 <span>بطيء</span>
+                        </button>
+                    </div>
+                    <div id="listen-feedback" class="h-6 font-bold text-sm"></div>
+                </div>
+
+                <!-- 4 Choices Grid -->
+                <div id="listen-choices" dir="ltr" class="grid grid-cols-1 sm:grid-cols-2 gap-4"></div>
+            </div>
+        </div>
+
+        <!-- ==================== TAB 4: CENTRAL EXAM SIMULATOR (GRADE 6) ==================== -->
+        <div id="view-exam" class="hidden max-w-4xl mx-auto py-4">
+            <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-xl border-2 border-[#718944] space-y-6">
+                
+                <!-- Exam Header -->
+                <div class="bg-gradient-to-l from-[#6b8142] to-[#4f622d] text-white p-5 rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-4 shadow">
+                    <div class="flex items-center gap-3">
+                        <div class="w-12 h-12 rounded-2xl bg-white/15 flex items-center justify-center text-2xl text-amber-300">
+                            <i class="fa-solid fa-award"></i>
+                        </div>
+                        <div>
+                            <span class="bg-amber-400 text-slate-900 text-xs font-black px-2.5 py-0.5 rounded-full">نموذج تدريبي ناطق</span>
+                            <h3 class="text-xl sm:text-2xl font-black mt-0.5">اختبار الاستعداد للاختبارات المركزية - سادس ابتدائي</h3>
+                            <p class="text-xs text-lime-100">الوحدة التمهيدية (Welcome - Top Goal 3) - يشمل جميع الـ 12 مفردة وجملها</p>
+                        </div>
+                    </div>
+                    <div class="bg-black/25 px-4 py-2 rounded-xl text-center shrink-0">
+                        <span class="text-xs text-lime-200 block">السؤال</span>
+                        <span id="exam-q-progress" class="font-en font-black text-2xl text-amber-300">1 / 12</span>
+                    </div>
+                </div>
+
+                <!-- Question Container -->
+                <div id="exam-question-area" class="space-y-6">
+                    <div class="flex flex-col sm:flex-row items-center gap-5 bg-slate-50 p-5 rounded-2xl border-2 border-slate-200">
+                        <div id="exam-illustration" class="w-32 h-28 bg-white rounded-2xl border border-slate-200 p-2 flex items-center justify-center shrink-0 shadow-sm"></div>
+                        <div class="flex-1 space-y-3 text-center sm:text-left" dir="ltr">
+                            <div class="flex items-center justify-between">
+                                <span id="exam-q-type" class="bg-orange-100 text-[#cc5a24] font-bold text-xs px-3 py-1 rounded-full" dir="rtl">أكمل الجملة بالكلمة الصحيحة:</span>
+                                <button onclick="speakExamQuestion()" class="bg-[#718944] hover:bg-[#596d34] text-white text-xs font-bold px-3 py-1.5 rounded-xl flex items-center gap-1.5 shadow-sm transition">
+                                    <i class="fa-solid fa-volume-high"></i> استمع للجملة
+                                </button>
+                            </div>
+                            <p id="exam-q-prompt" class="font-en text-xl sm:text-2xl font-black text-slate-800"></p>
+                            <p id="exam-q-hint" class="text-sm font-bold text-slate-500" dir="rtl"></p>
+                        </div>
+                    </div>
+
+                    <!-- 4 Multiple Choice Options -->
+                    <div id="exam-options" dir="ltr" class="grid grid-cols-1 sm:grid-cols-2 gap-3.5"></div>
+
+                    <!-- Explanation / Next Button Bar -->
+                    <div id="exam-feedback-bar" class="hidden p-4 rounded-2xl border-2 flex flex-col sm:flex-row items-center justify-between gap-4">
+                        <div id="exam-feedback-text" class="font-bold text-sm sm:text-base"></div>
+                        <button onclick="nextExamQuestion()" class="bg-slate-900 hover:bg-slate-800 text-white font-bold px-6 py-2.5 rounded-xl text-sm shrink-0 shadow transition">
+                            السؤال التالي <i class="fa-solid fa-arrow-left mr-1"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Exam Final Result Screen -->
+                <div id="exam-result-area" class="hidden text-center py-8 space-y-6">
+                    <div class="inline-flex p-5 rounded-full bg-amber-100 text-amber-500 text-6xl shadow-inner">
+                        <i class="fa-solid fa-trophy"></i>
+                    </div>
+                    <div class="space-y-2">
+                        <div class="inline-flex flex-col items-center bg-[#687d40] px-6 py-2 rounded-2xl border-2 border-[#4a5b2b] shadow-md mb-1" dir="ltr">
+                            <span class="full-mark-top text-3xl sm:text-4xl leading-none">FULL</span>
+                            <span class="full-mark-bottom text-3xl sm:text-4xl leading-none -mt-1">MARK</span>
+                        </div>
+                        <h4 class="text-2xl font-black text-slate-800">انتهيت من الاختبار المركزي التجريبي!</h4>
+                        <p id="exam-final-score" class="text-xl font-extrabold text-[#718944]"></p>
+                        <p class="text-sm font-bold text-[#3c096c]">مع تمنيات الأستاذ ماجد السويهري لكم بالتفوق والدرجة الكاملة — LANGUA LEARN</p>
+                    </div>
+                    <div class="flex justify-center gap-4">
+                        <button onclick="initExam()" class="bg-[#cc5a24] hover:bg-[#b04919] text-white font-bold px-6 py-3 rounded-2xl shadow-lg transition flex items-center gap-2">
+                            <i class="fa-solid fa-rotate-right"></i> إعادة الاختبار بترتيب جديد
+                        </button>
+                        <button onclick="switchTab('sheet')" class="bg-slate-200 hover:bg-slate-300 text-slate-800 font-bold px-6 py-3 rounded-2xl transition">
+                            العودة للدرس الناطق
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <!-- ==================== SPEECH PRACTICE MODAL (اختبر نطقك) ==================== -->
+    <div id="practice-modal" class="hidden fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-md w-full p-6 shadow-2xl border-4 border-[#718944] text-center space-y-5 animate-fadeIn">
+            <div class="flex items-center justify-between border-b pb-3">
+                <span class="font-black text-slate-800 flex items-center gap-2">
+                    <i class="fa-solid fa-microphone-lines text-[#cc5a24]"></i>
+                    مدرب النطق الذكي (Speaking Coach)
+                </span>
+                <button onclick="closePracticeModal()" class="w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 font-bold">✕</button>
+            </div>
+
+            <div class="space-y-2" dir="ltr">
+                <div class="text-xs font-bold text-slate-400 uppercase">Target Word</div>
+                <div id="prac-word" class="font-en text-3xl font-black text-[#cc5a24]">cookie</div>
+                <div id="prac-ipa" class="font-en text-sm text-slate-500">/ˈkʊk.i/</div>
+                <div id="prac-sentence" class="font-en text-base font-bold text-slate-700 bg-slate-100 p-2.5 rounded-xl mt-2">I like eating cookies.</div>
+            </div>
+
+            <div class="flex justify-center gap-3">
+                <button onclick="speakPracticeTarget(1.0)" class="bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold px-4 py-2 rounded-xl text-xs flex items-center gap-1.5">
+                    <i class="fa-solid fa-volume-high text-[#cc5a24]"></i> استمع للنطق الصحيح
+                </button>
+                <button onclick="speakPracticeTarget(0.65)" class="bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold px-4 py-2 rounded-xl text-xs flex items-center gap-1.5">
+                    🐢 استمع ببطء
+                </button>
+            </div>
+
+            <div class="py-3">
+                <button id="btn-start-mic" onclick="startSpeechRecognition()" class="w-20 h-20 rounded-full bg-[#cc5a24] hover:bg-[#b04919] text-white text-3xl shadow-xl flex items-center justify-center mx-auto transition transform hover:scale-105 active:scale-95">
+                    <i class="fa-solid fa-microphone"></i>
+                </button>
+                <p id="prac-status" class="text-xs font-bold text-slate-500 mt-3">اضغط على الميكروفون وانطق الكلمة بالإنجليزية</p>
+            </div>
+
+            <div id="prac-result" class="hidden p-3.5 rounded-2xl text-sm font-bold"></div>
+        </div>
+    </div>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="bg-white border-t-2 border-[#718944]/30 py-4 px-4 mt-8 text-center text-xs font-bold text-slate-600">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
+            <div class="flex items-center gap-2">
+                <span class="bg-[#3c096c] text-white font-en font-black px-2.5 py-1 rounded-lg text-[11px]">LANGUA LEARN</span>
+                <span>الاستعداد للاختبارات المركزية للصف السادس الإبتدائي — <strong class="font-en text-slate-800">Top Goal 3</strong></span>
+            </div>
+            <div class="flex items-center gap-2 text-sm font-black text-[#4f622d]">
+                <i class="fa-solid fa-user-tie text-[#cc5a24]"></i>
+                <span>إعداد وإشراف: الأستاذ ماجد السويهري</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== JAVASCRIPT LOGIC ==================== -->
+    <script>
+        // ============================================================================
+        // 1. COMPLETE VOCABULARY DATA (12 ITEMS FROM TOP GOAL 3 - WELCOME UNIT)
+        // ============================================================================
+        const vocabularyData = [
+            {
+                id: 1,
+                word: "cookie",
+                meaning: "كوكيز / بسكويت",
+                ipa: "/ˈkʊk.i/",
+                arabicPhonetic: "كُوكـي",
+                sentence: "I like eating cookies.",
+                sentenceParts: ["I like eating ", "cookies", "."],
+                sentenceAr: "أنا أحب أكل الكوكيز (البسكويت).",
+                rowTheme: "orange",
+                svg: `<svg viewBox="0 0 160 120" class="w-36 h-32 drop-shadow-md">
+                    <ellipse cx="80" cy="62" rx="54" ry="44" fill="#d99b52" stroke="#a66c29" stroke-width="3"/>
+                    <ellipse cx="78" cy="59" rx="50" ry="40" fill="#e6ac65"/>
+                    <path d="M45,45 Q60,52 70,42" stroke="#b87b34" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                    <path d="M75,70 Q92,65 105,78" stroke="#b87b34" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                    <path d="M50,75 Q65,85 80,78" stroke="#b87b34" stroke-width="2" fill="none" stroke-linecap="round"/>
+                    <!-- Chocolate Chips -->
+                    <path d="M55,35 C52,28 63,28 60,36 Z" fill="#3d2314"/>
+                    <circle cx="85" cy="36" r="6.5" fill="#3d2314"/>
+                    <circle cx="108" cy="52" r="6" fill="#4a2c18"/>
+                    <circle cx="72" cy="56" r="7" fill="#3d2314"/>
+                    <circle cx="46" cy="58" r="6" fill="#4a2c18"/>
+                    <circle cx="62" cy="80" r="6.5" fill="#3d2314"/>
+                    <circle cx="94" cy="74" r="7" fill="#3d2314"/>
+                    <circle cx="112" cy="72" r="5" fill="#4a2c18"/>
+                    <circle cx="82" cy="90" r="5.5" fill="#3d2314"/>
+                </svg>`
+            },
+            {
+                id: 2,
+                word: "gate",
+                meaning: "بوابة",
+                ipa: "/ɡeɪt/",
+                arabicPhonetic: "جَيْت",
+                sentence: "We entered through the gate.",
+                sentenceParts: ["We entered through the ", "gate", "."],
+                sentenceAr: "دخلنا عبر البوابة.",
+                rowTheme: "orange",
+                svg: `<svg viewBox="0 0 160 120" class="w-36 h-32">
+                    <!-- Sky & Trees -->
+                    <rect x="8" y="10" width="144" height="98" rx="10" fill="#e0f2fe"/>
+                    <circle cx="25" cy="55" r="22" fill="#4d7c0f"/>
+                    <circle cx="135" cy="55" r="22" fill="#4d7c0f"/>
+                    <!-- Background School Building -->
+                    <rect x="52" y="36" width="56" height="45" fill="#b45309"/>
+                    <polygon points="48,36 80,16 112,36" fill="#7c2d12"/>
+                    <rect x="73" y="55" width="14" height="26" fill="#fde68a"/>
+                    <!-- Lawn & Path -->
+                    <rect x="8" y="80" width="144" height="28" fill="#65a30d"/>
+                    <polygon points="62,80 98,80 110,108 50,108" fill="#94a3b8"/>
+                    <!-- Brick Pillars -->
+                    <rect x="26" y="42" width="18" height="58" fill="#9a3412" stroke="#451a03" stroke-width="1.5"/>
+                    <rect x="24" y="38" width="22" height="5" fill="#d6d3d1"/>
+                    <rect x="116" y="42" width="18" height="58" fill="#9a3412" stroke="#451a03" stroke-width="1.5"/>
+                    <rect x="114" y="38" width="22" height="5" fill="#d6d3d1"/>
+                    <!-- Black Iron Gate -->
+                    <path d="M44,50 Q80,38 116,50" stroke="#1e293b" stroke-width="3" fill="none"/>
+                    <line x1="44" y1="96" x2="116" y2="96" stroke="#1e293b" stroke-width="3"/>
+                    <line x1="44" y1="74" x2="116" y2="74" stroke="#1e293b" stroke-width="2"/>
+                    <line x1="53" y1="47" x2="53" y2="96" stroke="#1e293b" stroke-width="2.2"/>
+                    <line x1="62" y1="45" x2="62" y2="96" stroke="#1e293b" stroke-width="2.2"/>
+                    <line x1="71" y1="44" x2="71" y2="96" stroke="#1e293b" stroke-width="2.2"/>
+                    <line x1="80" y1="43" x2="80" y2="98" stroke="#0f172a" stroke-width="3"/>
+                    <line x1="89" y1="44" x2="89" y2="96" stroke="#1e293b" stroke-width="2.2"/>
+                    <line x1="98" y1="45" x2="98" y2="96" stroke="#1e293b" stroke-width="2.2"/>
+                    <line x1="107" y1="47" x2="107" y2="96" stroke="#1e293b" stroke-width="2.2"/>
+                </svg>`
+            },
+            {
+                id: 3,
+                word: "helmet",
+                meaning: "خوذة",
+                ipa: "/ˈhel.mɪt/",
+                arabicPhonetic: "هِلْمِت",
+                sentence: "He wears a helmet.",
+                sentenceParts: ["He wears a ", "helmet", "."],
+                sentenceAr: "هو يرتدي خوذة.",
+                rowTheme: "orange",
+                svg: `<svg viewBox="0 0 160 120" class="w-36 h-32 drop-shadow-md">
+                    <!-- Inner Suspension -->
+                    <path d="M35,76 Q55,95 95,84" stroke="#cbd5e1" stroke-width="5" fill="none" stroke-linecap="round"/>
+                    <!-- Main Yellow Hard Hat Dome -->
+                    <path d="M26,74 C26,32 118,28 126,72 Z" fill="#facc15" stroke="#ca8a04" stroke-width="2.5"/>
+                    <!-- Top Ridge -->
+                    <path d="M42,38 C68,24 98,28 114,52" stroke="#eab308" stroke-width="6" fill="none" stroke-linecap="round"/>
+                    <!-- Gloss Highlight -->
+                    <path d="M45,48 C62,36 85,38 98,50" stroke="#fef08a" stroke-width="4" fill="none" stroke-linecap="round"/>
+                    <!-- Side Black Clip -->
+                    <path d="M25,65 L44,74 L40,80 L23,71 Z" fill="#1e293b"/>
+                    <!-- Front Brim Visor -->
+                    <path d="M20,72 Q82,76 144,76 Q148,83 130,84 Q75,84 22,77 Z" fill="#eab308" stroke="#a16207" stroke-width="2"/>
+                </svg>`
+            },
+            {
+                id: 4,
+                word: "journalist",
+                meaning: "صحفي",
+                ipa: "/ˈdʒɜː.nə.lɪst/",
+                arabicPhonetic: "جُورْنَالِسْت",
+                sentence: "She is a journalist.",
+                sentenceParts: ["She is a ", "journalist", "."],
+                sentenceAr: "هي صحفية.",
+                rowTheme: "orange",
+                svg: `<svg viewBox="0 0 160 120" class="w-36 h-32">
+                    <!-- Journalist Blue Shirt & Press ID -->
+                    <path d="M135,45 L155,40 L155,105 L132,105 Z" fill="#60a5fa" stroke="#2563eb" stroke-width="2"/>
+                    <!-- Sleeve -->
+                    <path d="M98,58 L136,48 L138,76 L102,75 Z" fill="#93c5fd" stroke="#3b82f6" stroke-width="2"/>
+                    <!-- Hand holding mic -->
+                    <path d="M72,48 C82,44 96,52 100,60 C98,68 85,70 75,62 Z" fill="#e0ac69" stroke="#b57c3e" stroke-width="1.5"/>
+                    <!-- Microphone Handle & Foam -->
+                    <line x1="42" y1="32" x2="92" y2="68" stroke="#1e293b" stroke-width="8" stroke-linecap="round"/>
+                    <ellipse cx="36" cy="27" rx="14" ry="11" transform="rotate(35 36 27)" fill="#0f172a"/>
+                    <!-- Mic Cord -->
+                    <path d="M90,67 Q102,88 106,110" stroke="#0f172a" stroke-width="2.5" fill="none"/>
+                    <!-- Press Badge -->
+                    <line x1="148" y1="42" x2="142" y2="75" stroke="#1e293b" stroke-width="2"/>
+                    <rect x="134" y="75" width="16" height="22" rx="2" fill="#ffffff" stroke="#475569" stroke-width="1.5"/>
+                    <rect x="137" y="79" width="10" height="6" fill="#3b82f6"/>
+                </svg>`
+            },
+            {
+                id: 5,
+                word: "storyboard",
+                meaning: "لوحة القصة",
+                ipa: "/ˈstɔː.ri.bɔːd/",
+                arabicPhonetic: "سْتُورِي بُورْد",
+                sentence: "The director drew a storyboard.",
+                sentenceParts: ["The director drew a ", "storyboard", "."],
+                sentenceAr: "رسم المخرج لوحة القصة.",
+                rowTheme: "green",
+                svg: `<svg viewBox="0 0 160 120" class="w-36 h-32">
+                    <!-- Drawing Board / Sketchbook -->
+                    <polygon points="22,22 132,14 142,88 30,98" fill="#f8fafc" stroke="#334155" stroke-width="2.5"/>
+                    <line x1="78" y1="18" x2="86" y2="93" stroke="#94a3b8" stroke-width="2"/>
+                    <!-- Story Panels Left Page -->
+                    <rect x="30" y="28" width="42" height="26" fill="#e2e8f0" stroke="#475569" stroke-width="1.5"/>
+                    <circle cx="45" cy="38" r="5" fill="#64748b"/>
+                    <path d="M36,52 Q45,42 56,52" stroke="#475569" stroke-width="2" fill="none"/>
+                    <rect x="34" y="60" width="42" height="26" fill="#e2e8f0" stroke="#475569" stroke-width="1.5"/>
+                    <!-- Story Panels Right Page -->
+                    <rect x="86" y="24" width="40" height="26" fill="#e2e8f0" stroke="#475569" stroke-width="1.5"/>
+                    <rect x="88" y="56" width="42" height="26" fill="#e2e8f0" stroke="#475569" stroke-width="1.5"/>
+                    <circle cx="108" cy="66" r="5" fill="#64748b"/>
+                    <!-- Director Hands & Pencil -->
+                    <circle cx="48" cy="98" r="10" fill="#e0ac69"/>
+                    <line x1="115" y1="68" x2="145" y2="52" stroke="#f59e0b" stroke-width="4" stroke-linecap="round"/>
+                </svg>`
+            },
+            {
+                id: 6,
+                word: "taxi",
+                meaning: "سيارة أجرة",
+                ipa: "/ˈtæk.si/",
+                arabicPhonetic: "تَاكْسِي",
+                sentence: "We took a taxi to the airport.",
+                sentenceParts: ["We took a ", "taxi", " to the airport."],
+                sentenceAr: "أخذنا سيارة أجرة إلى المطار.",
+                rowTheme: "green",
+                svg: `<svg viewBox="0 0 160 120" class="w-36 h-32 drop-shadow">
+                    <!-- Shadow -->
+                    <ellipse cx="80" cy="96" rx="64" ry="7" fill="#cbd5e1"/>
+                    <!-- Taxi Roof Sign -->
+                    <rect x="68" y="26" width="24" height="9" rx="3" fill="#1e293b"/>
+                    <text x="80" y="33" font-size="6.5" text-anchor="middle" fill="#facc15" font-family="sans-serif" font-weight="bold">TAXI</text>
+                    <!-- Car Body -->
+                    <path d="M18,72 L26,54 L48,36 L108,36 L130,54 L144,68 L144,86 L16,86 Z" fill="#facc15" stroke="#ca8a04" stroke-width="2"/>
+                    <!-- Windows -->
+                    <polygon points="52,40 78,40 78,55 34,55" fill="#334155"/>
+                    <polygon points="83,40 105,40 122,55 83,55" fill="#334155"/>
+                    <!-- Front Grille & Headlights -->
+                    <rect x="20" y="64" width="14" height="7" rx="2" fill="#f8fafc" stroke="#94a3b8"/>
+                    <rect x="38" y="64" width="16" height="8" rx="2" fill="#1e293b"/>
+                    <!-- Checkered Stripe -->
+                    <line x1="65" y1="68" x2="135" y2="68" stroke="#1e293b" stroke-width="3" stroke-dasharray="5,5"/>
+                    <!-- Wheels -->
+                    <circle cx="45" cy="86" r="13" fill="#1e293b"/>
+                    <circle cx="45" cy="86" r="6" fill="#cbd5e1"/>
+                    <circle cx="118" cy="86" r="13" fill="#1e293b"/>
+                    <circle cx="118" cy="86" r="6" fill="#cbd5e1"/>
+                </svg>`
+            },
+            {
+                id: 7,
+                word: "tie",
+                meaning: "ربطة عنق",
+                ipa: "/taɪ/",
+                arabicPhonetic: "تَاي",
+                sentence: "He wore a blue tie.",
+                sentenceParts: ["He wore a blue ", "tie", "."],
+                sentenceAr: "هو ارتدى ربطة عنق زرقاء.",
+                rowTheme: "green",
+                svg: `<svg viewBox="0 0 160 120" class="w-36 h-32 drop-shadow-md">
+                    <!-- Coiled Back Part of Tie -->
+                    <ellipse cx="105" cy="52" rx="26" ry="22" fill="#1e3a8a" stroke="#0f172a" stroke-width="2"/>
+                    <ellipse cx="112" cy="52" rx="16" ry="14" fill="#172554" stroke="#93c5fd" stroke-width="1.5" stroke-dasharray="6,4"/>
+                    <!-- Front Blade of Blue Striped Tie -->
+                    <polygon points="75,26 105,34 86,92 48,98 34,76" fill="#1e3a8a" stroke="#0f172a" stroke-width="2"/>
+                    <!-- Diagonal Stripes -->
+                    <line x1="65" y1="36" x2="98" y2="48" stroke="#bae6fd" stroke-width="2.5"/>
+                    <line x1="56" y1="50" x2="94" y2="64" stroke="#bae6fd" stroke-width="2.5"/>
+                    <line x1="46" y1="64" x2="90" y2="80" stroke="#bae6fd" stroke-width="2.5"/>
+                    <line x1="38" y1="78" x2="76" y2="92" stroke="#bae6fd" stroke-width="2.5"/>
+                </svg>`
+            },
+            {
+                id: 8,
+                word: "agree",
+                meaning: "يوافق",
+                ipa: "/əˈɡriː/",
+                arabicPhonetic: "أَغْرِي",
+                sentence: "They agree on the plan.",
+                sentenceParts: ["They ", "agree", " on the plan."],
+                sentenceAr: "هم يوافقون على الخطة.",
+                rowTheme: "green",
+                svg: `<svg viewBox="0 0 160 120" class="w-36 h-32">
+                    <!-- Left Sleeve (Beige) -->
+                    <polygon points="5,35 45,45 38,76 5,68" fill="#d6d3d1" stroke="#78716c" stroke-width="2"/>
+                    <!-- Right Sleeve (Blue Denim) -->
+                    <polygon points="155,35 115,45 122,76 155,68" fill="#1d4ed8" stroke="#1e3a8a" stroke-width="2"/>
+                    <!-- Handshake Clasp -->
+                    <path d="M42,48 C58,42 75,40 92,48 C105,54 118,48 120,62 C115,78 92,88 70,84 C52,80 42,72 38,68 Z" fill="#e0ac69" stroke="#9a5b25" stroke-width="2"/>
+                    <!-- Fingers Detail -->
+                    <path d="M62,46 C72,44 82,48 86,56" stroke="#9a5b25" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+                    <ellipse cx="64" cy="74" rx="5" ry="8" transform="rotate(-25 64 74)" fill="#d29956" stroke="#9a5b25" stroke-width="1.5"/>
+                    <ellipse cx="74" cy="77" rx="5" ry="8" transform="rotate(-25 74 77)" fill="#d29956" stroke="#9a5b25" stroke-width="1.5"/>
+                    <ellipse cx="84" cy="79" rx="5" ry="7" transform="rotate(-25 84 79)" fill="#d29956" stroke="#9a5b25" stroke-width="1.5"/>
+                </svg>`
+            },
+            {
+                id: 9,
+                word: "at the moment",
+                meaning: "في الوقت الحالي",
+                ipa: "/æt ðə ˈməʊ.mənt/",
+                arabicPhonetic: "آت ذَا مُومِنْت",
+                sentence: "I am studying at the moment.",
+                sentenceParts: ["I am studying ", "at the moment", "."],
+                sentenceAr: "أنا أذاكر في الوقت الحالي.",
+                rowTheme: "orange",
+                svg: `<svg viewBox="0 0 160 120" class="w-36 h-32">
+                    <!-- Boy in Green Hoodie Looking at Wristwatch -->
+                    <path d="M35,112 C35,76 125,76 125,112 Z" fill="#15803d" stroke="#14532d" stroke-width="2"/>
+                    <!-- Head & Hair -->
+                    <circle cx="80" cy="44" r="20" fill="#f1c27d" stroke="#b57c3e" stroke-width="1.5"/>
+                    <path d="M60,40 C60,20 102,20 100,40 C92,30 68,30 60,40 Z" fill="#3f2314"/>
+                    <!-- Eyes looking down at watch -->
+                    <circle cx="74" cy="46" r="2" fill="#1e293b"/>
+                    <circle cx="88" cy="46" r="2" fill="#1e293b"/>
+                    <path d="M76,54 Q82,58 87,54" stroke="#9a3412" stroke-width="2" fill="none" stroke-linecap="round"/>
+                    <!-- Raised Arm with Wristwatch -->
+                    <path d="M42,96 L95,86 L102,98 L45,108 Z" fill="#166534" stroke="#14532d" stroke-width="1.5"/>
+                    <circle cx="102" cy="91" r="7" fill="#f1c27d"/>
+                    <!-- Watch -->
+                    <rect x="85" y="84" width="10" height="14" rx="2" fill="#1e293b"/>
+                    <circle cx="90" cy="91" r="4.5" fill="#38bdf8" stroke="#ffffff" stroke-width="1"/>
+                </svg>`
+            },
+            {
+                id: 10,
+                word: "glass",
+                meaning: "كوب",
+                ipa: "/ɡlɑːs/",
+                arabicPhonetic: "غْلَاس",
+                sentence: "Please give me a glass of water.",
+                sentenceParts: ["Please give me a ", "glass", " of water."],
+                sentenceAr: "من فضلك أعطني كوباً من الماء.",
+                rowTheme: "orange",
+                svg: `<svg viewBox="0 0 160 120" class="w-36 h-32 drop-shadow">
+                    <!-- Glass Tumbler -->
+                    <polygon points="46,22 114,22 104,102 56,102" fill="#f8fafc" stroke="#94a3b8" stroke-width="2.5"/>
+                    <!-- Liquid Fill -->
+                    <polygon points="49,44 111,44 102,96 58,96" fill="#e2e8f0"/>
+                    <ellipse cx="80" cy="44" rx="31" ry="5" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.5"/>
+                    <!-- Top Rim -->
+                    <ellipse cx="80" cy="22" rx="34" ry="5.5" fill="none" stroke="#94a3b8" stroke-width="2.5"/>
+                    <!-- Heavy Glass Base -->
+                    <ellipse cx="80" cy="102" rx="24" ry="4.5" fill="#cbd5e1" stroke="#64748b" stroke-width="2"/>
+                    <!-- Glass Reflection Highlight -->
+                    <line x1="56" y1="32" x2="62" y2="92" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+                </svg>`
+            },
+            {
+                id: 11,
+                word: "go away",
+                meaning: "اذهب بعيدًا",
+                ipa: "/ɡəʊ əˈweɪ/",
+                arabicPhonetic: "غُو أَوَاي",
+                sentence: "Go away, please!",
+                sentenceParts: ["", "Go away", ", please!"],
+                sentenceAr: "اذهب بعيداً من فضلك!",
+                rowTheme: "orange",
+                svg: `<svg viewBox="0 0 160 120" class="w-36 h-32">
+                    <!-- Boy Turned Back in Blue Hoodie -->
+                    <path d="M40,112 L46,60 L96,60 L102,112 Z" fill="#1e3a8a" stroke="#0f172a" stroke-width="2"/>
+                    <!-- Hood on Back -->
+                    <path d="M52,60 Q72,78 90,60 Z" fill="#172554" stroke="#0f172a" stroke-width="1.5"/>
+                    <!-- Head from Back/Side -->
+                    <circle cx="70" cy="38" r="17" fill="#f1c27d"/>
+                    <path d="M54,42 C52,20 86,18 86,42 C82,50 60,50 54,42 Z" fill="#3f2314"/>
+                    <!-- Extended Right Arm to the Side -->
+                    <path d="M92,64 L132,56 L134,70 L94,78 Z" fill="#1e3a8a" stroke="#0f172a" stroke-width="2"/>
+                    <!-- Raised Stop Hand Gesture -->
+                    <rect x="130" y="38" width="18" height="24" rx="7" fill="#f1c27d" stroke="#b57c3e" stroke-width="1.5"/>
+                    <line x1="135" y1="38" x2="135" y2="48" stroke="#b57c3e" stroke-width="1.5"/>
+                    <line x1="140" y1="38" x2="140" y2="48" stroke="#b57c3e" stroke-width="1.5"/>
+                    <line x1="144" y1="38" x2="144" y2="48" stroke="#b57c3e" stroke-width="1.5"/>
+                </svg>`
+            },
+            {
+                id: 12,
+                word: "if you want",
+                meaning: "إذا أردت",
+                ipa: "/ɪf juː wɒnt/",
+                arabicPhonetic: "إِف يُو وَانْت",
+                sentence: "You can come if you want.",
+                sentenceParts: ["You can come ", "if you want", "."],
+                sentenceAr: "يمكنك أن تأتي إذا أردت.",
+                rowTheme: "orange",
+                svg: `<svg viewBox="0 0 160 120" class="w-36 h-32">
+                    <!-- Smiling Boy in Green Shirt Pointing -->
+                    <path d="M58,112 L62,64 L116,64 L120,112 Z" fill="#16a34a" stroke="#14532d" stroke-width="2"/>
+                    <!-- Head -->
+                    <circle cx="88" cy="40" r="19" fill="#f1c27d" stroke="#b57c3e" stroke-width="1.5"/>
+                    <path d="M70,34 C70,15 108,15 107,36 C96,26 78,26 70,34 Z" fill="#27170e"/>
+                    <!-- Happy Face -->
+                    <circle cx="81" cy="39" r="2" fill="#1e293b"/>
+                    <circle cx="94" cy="39" r="2" fill="#1e293b"/>
+                    <path d="M80,48 Q88,54 95,48" stroke="#9a3412" stroke-width="2" fill="none" stroke-linecap="round"/>
+                    <!-- Right Arm Pointing Left -->
+                    <path d="M64,70 L32,60 L28,72 L60,82 Z" fill="#16a34a" stroke="#14532d" stroke-width="1.5"/>
+                    <!-- Pointing Hand -->
+                    <circle cx="26" cy="64" r="6" fill="#f1c27d"/>
+                    <line x1="26" y1="62" x2="14" y2="58" stroke="#f1c27d" stroke-width="4" stroke-linecap="round"/>
+                    <!-- Left Arm Pointing Left -->
+                    <path d="M112,72 L78,72 L78,84 L112,84 Z" fill="#15803d" stroke="#14532d" stroke-width="1.5"/>
+                    <circle cx="74" cy="77" r="6" fill="#f1c27d"/>
+                    <line x1="74" y1="75" x2="62" y2="73" stroke="#f1c27d" stroke-width="4" stroke-linecap="round"/>
+                </svg>`
+            }
+        ];
+
+        // ============================================================================
+        // 2. STATE & PRONUNCIATION ENGINE (100% ACCURATE BRITISH WEB SPEECH)
+        // ============================================================================
+        let currentSpeed = 1.0;
+        let showPhonetics = false;
+        let masteredIds = new Set();
+        let isAutoPlaying = false;
+        let autoPlayTimeout = null;
+        let currentFlashcardIndex = 0;
+        let showFcMeaning = true;
+        let listenTarget = null;
+        let listenModeSentence = false;
+        let listenScore = 0;
+        let examQuestions = [];
+        let examIndex = 0;
+        let examScore = 0;
+        let practiceTarget = null;
+        let availableVoices = [];
+
+        function loadVoices() {
+            if ('speechSynthesis' in window) {
+                availableVoices = window.speechSynthesis.getVoices();
+            }
+        }
+
+        if ('speechSynthesis' in window) {
+            loadVoices();
+            window.speechSynthesis.onvoiceschanged = loadVoices;
+        }
+
+        function getBestBritishVoice() {
+            if (!availableVoices || availableVoices.length === 0) {
+                loadVoices();
+            }
+            const ukVoices = availableVoices.filter(v =>
+                v.lang.replace('_', '-').toLowerCase().startsWith('en-gb')
+            );
+            const preferredNames = ['Google UK English', 'Libby', 'Sonia', 'Ryan', 'Daniel', 'Martha', 'Arthur', 'Serena'];
+            for (const pref of preferredNames) {
+                const match = ukVoices.find(v => v.name.includes(pref));
+                if (match) return match;
+            }
+            if (ukVoices.length > 0) return ukVoices[0];
+
+            const anyEnglish = availableVoices.find(v => v.lang.toLowerCase().startsWith('en'));
+            return anyEnglish || null;
+        }
+
+        function setSpeed(speed) {
+            currentSpeed = speed;
+            const normalBtn = document.getElementById('speed-normal');
+            const slowBtn = document.getElementById('speed-slow');
+            if (speed === 1.0) {
+                normalBtn.className = 'px-2.5 py-1 rounded-lg bg-[#718944] text-white transition';
+                slowBtn.className = 'px-2.5 py-1 rounded-lg text-slate-600 hover:text-slate-900 transition';
+            } else {
+                slowBtn.className = 'px-2.5 py-1 rounded-lg bg-[#cc5a24] text-white transition';
+                normalBtn.className = 'px-2.5 py-1 rounded-lg text-slate-600 hover:text-slate-900 transition';
+            }
+        }
+
+        function clearActiveHighlights() {
+            document.querySelectorAll('.vocab-card').forEach(el => el.classList.remove('speaking-card'));
+            document.querySelectorAll('.target-word-span').forEach(el => el.classList.remove('word-highlight-active'));
+        }
+
+        function stopAllAudio() {
+            isAutoPlaying = false;
+            if (autoPlayTimeout) {
+                clearTimeout(autoPlayTimeout);
+                autoPlayTimeout = null;
+            }
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+            }
+            clearActiveHighlights();
+            const npBar = document.getElementById('now-playing-bar');
+            if (npBar) npBar.classList.add('hidden');
+            updateAutoPlayButtonUI();
+        }
+
+        // Normalize compound words like "storyboard" for TTS so both syllables ("story" + "board") are pronounced 100% clearly
+        function prepareSpeechText(text) {
+            if (!text) return '';
+            return text
+                .replace(/\bstoryboards\b/gi, 'story boards')
+                .replace(/\bstoryboard\b/gi, 'story board');
+        }
+
+        let speechStartTimer = null;
+
+        function speakBritishText(text, labelText, rateOverride = null, cardId = null, highlightTarget = false, onEndCallback = null) {
+            if (!('speechSynthesis' in window)) return;
+
+            if (speechStartTimer) {
+                clearTimeout(speechStartTimer);
+                speechStartTimer = null;
+            }
+            window.speechSynthesis.cancel();
+            clearActiveHighlights();
+
+            const spokenText = prepareSpeechText(text);
+            const utterance = new SpeechSynthesisUtterance(spokenText);
+            utterance.lang = 'en-GB';
+            const ukVoice = getBestBritishVoice();
+            if (ukVoice) utterance.voice = ukVoice;
+            utterance.rate = rateOverride !== null ? rateOverride : currentSpeed;
+            utterance.pitch = 1.0;
+
+            const npBar = document.getElementById('now-playing-bar');
+            const npLabel = document.getElementById('np-label');
+            const npText = document.getElementById('np-text');
+
+            if (npBar && npLabel && npText) {
+                npLabel.textContent = labelText || 'جاري النطق البريطاني (UK)...';
+                npText.textContent = text;
+                npBar.classList.remove('hidden');
+            }
+
+            if (cardId) {
+                const cardEl = document.getElementById(`vocab-card-${cardId}`);
+                if (cardEl) cardEl.classList.add('speaking-card');
+                if (highlightTarget) {
+                    const spanEl = document.getElementById(`target-span-${cardId}`);
+                    if (spanEl) spanEl.classList.add('word-highlight-active');
+                }
+            }
+
+            utterance.onend = () => {
+                clearActiveHighlights();
+                if (!isAutoPlaying && npBar) {
+                    npBar.classList.add('hidden');
+                }
+                if (typeof onEndCallback === 'function') {
+                    onEndCallback();
+                }
+            };
+
+            utterance.onerror = () => {
+                clearActiveHighlights();
+                if (npBar) npBar.classList.add('hidden');
+            };
+
+            // Slight delay after cancel() prevents browsers from clipping the first consonant ("st-" in storyboard)
+            speechStartTimer = setTimeout(() => {
+                window.speechSynthesis.speak(utterance);
+            }, 45);
+        }
+
+        // ============================================================================
+        // 3. RENDER WORKSHEET CARDS (4x3 GRID)
+        // ============================================================================
+        function renderWorksheetCards() {
+            const grid = document.getElementById('cards-grid');
+            if (!grid) return;
+
+            grid.innerHTML = vocabularyData.map(item => {
+                const isOrange = item.rowTheme === 'orange';
+                const sidePillBg = isOrange ? 'bg-[#cc5a24]' : 'bg-[#6b8142]';
+                const numBoxBg = isOrange ? 'bg-[#cc5a24] border-[#9a3f15]' : 'bg-[#6b8142] border-[#4a5b2b]';
+                const wordColor = isOrange ? 'text-[#cc5a24]' : 'text-[#5b7034]';
+                const targetColor = isOrange ? 'text-[#cc5a24]' : 'text-[#5b7034]';
+
+                return `
+                <div id="vocab-card-${item.id}" class="vocab-card relative bg-white/90 rounded-3xl p-3 border-2 border-slate-300 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                    
+                    <!-- Decorative Side Colored Tab matching original worksheet -->
+                    <div class="absolute -left-1.5 top-6 bottom-24 w-2.5 ${sidePillBg} rounded-l-xl -z-10"></div>
+
+                    <!-- Top Illustration Frame (Click to speak word) -->
+                    <div onclick="speakWordById(${item.id})" class="cursor-pointer group relative bg-white rounded-2xl border-2 border-slate-700 h-44 flex items-center justify-center p-3 overflow-hidden hover:border-[#cc5a24] transition">
+                        <div class="transform group-hover:scale-105 transition duration-300">
+                            ${item.svg}
+                        </div>
+
+                        <!-- Speaker Badge on top right of image -->
+                        <button type="button" class="absolute top-2.5 right-2.5 w-9 h-9 rounded-xl bg-amber-50 hover:bg-[#cc5a24] text-[#cc5a24] hover:text-white border border-amber-200 flex items-center justify-center shadow-sm transition" title="انطق الكلمة">
+                            <i class="fa-solid fa-volume-high text-sm"></i>
+                        </button>
+
+                        <!-- Slow Turtle Button on top left of image -->
+                        <button type="button" onclick="event.stopPropagation(); speakWordById(${item.id}, 0.62)" class="absolute top-2.5 left-2.5 px-2 py-1 rounded-lg bg-slate-100 hover:bg-amber-100 text-slate-700 text-[11px] font-bold border border-slate-200 shadow-sm transition" title="نطق بطيء للتدريب">
+                            🐢 بطيء
+                        </button>
+                    </div>
+
+                    <!-- Middle Row: Number Badge + Word & Arabic Meaning Box -->
+                    <div class="flex items-stretch gap-2 mt-2.5">
+                        <!-- Number Badge -->
+                        <div class="w-10 rounded-xl ${numBoxBg} border-2 text-white font-en-display font-extrabold text-lg flex items-center justify-center shadow-sm shrink-0">
+                            ${item.id}
+                        </div>
+
+                        <!-- Word & Meaning Box -->
+                        <div onclick="speakWordById(${item.id})" class="cursor-pointer flex-1 bg-white hover:bg-amber-50/40 rounded-xl border-2 border-slate-700 px-3 py-1.5 text-center transition">
+                            <div class="font-en font-black text-xl leading-tight ${wordColor}">${item.word}</div>
+                            <div class="text-sm font-extrabold text-slate-700 mt-0.5" dir="rtl">${item.meaning}</div>
+                            
+                            <!-- Optional Phonetics Row -->
+                            <div class="phonetic-row ${showPhonetics ? 'block' : 'hidden'} mt-1 pt-1 border-t border-dashed border-slate-200 text-[11px]">
+                                <span class="font-en text-slate-500 font-bold block">${item.ipa}</span>
+                                <span class="text-[#3c096c] font-bold block" dir="rtl">النطق التقريبي: ${item.arabicPhonetic}</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bottom Row: Example Sentence Box (Click to speak full sentence) -->
+                    <div onclick="speakSentenceById(${item.id})" class="cursor-pointer mt-2 bg-white hover:bg-lime-50 rounded-xl border-2 border-slate-700 px-3 py-2 text-center transition group">
+                        <div class="font-en text-sm font-extrabold text-slate-800 flex items-center justify-center gap-1.5">
+                            <i class="fa-solid fa-circle-play text-xs text-slate-400 group-hover:text-[#cc5a24] transition"></i>
+                            <span>
+                                ${item.sentenceParts[0]}<span id="target-span-${item.id}" class="target-word-span ${targetColor} font-black underline decoration-dotted">${item.sentenceParts[1]}</span>${item.sentenceParts[2]}
+                            </span>
+                        </div>
+                        <div class="phonetic-row ${showPhonetics ? 'block' : 'hidden'} text-[11px] font-bold text-slate-500 mt-1" dir="rtl">
+                            ${item.sentenceAr}
+                        </div>
+                    </div>
+
+                    <!-- Interactive Action Footer (Practice Mic + Slow Sentence) -->
+                    <div class="flex items-center justify-between gap-1.5 mt-2 pt-1.5 border-t border-slate-100" dir="rtl">
+                        <button onclick="speakSentenceById(${item.id}, 0.65)" class="flex-1 bg-slate-100 hover:bg-slate-200 text-slate-700 text-[11px] font-bold py-1.5 px-2 rounded-lg flex items-center justify-center gap-1 transition">
+                            <i class="fa-solid fa-ear-listen text-[#718944]"></i>
+                            <span>الجملة ببطء</span>
+                        </button>
+                        <button onclick="openPracticeModal(${item.id})" class="flex-1 bg-orange-50 hover:bg-[#cc5a24] text-[#cc5a24] hover:text-white border border-orange-200 text-[11px] font-bold py-1.5 px-2 rounded-lg flex items-center justify-center gap-1 transition">
+                            <i class="fa-solid fa-microphone"></i>
+                            <span>انطقها</span>
+                        </button>
+                    </div>
+                </div>`;
+            }).join('');
+        }
+
+        function speakWordById(id, customRate = null) {
+            const item = vocabularyData.find(v => v.id === id);
+            if (!item) return;
+            markMastered(id);
+            speakBritishText(
+                item.word,
+                `نطق المفردة رقم (${item.id}) — ${item.meaning}`,
+                customRate,
+                item.id,
+                false
+            );
+        }
+
+        function speakSentenceById(id, customRate = null) {
+            const item = vocabularyData.find(v => v.id === id);
+            if (!item) return;
+            markMastered(id);
+            speakBritishText(
+                item.sentence,
+                `نطق الجملة رقم (${item.id}) — ${item.sentenceAr}`,
+                customRate,
+                item.id,
+                true
+            );
+        }
+
+        function markMastered(id) {
+            masteredIds.add(id);
+            const counter = document.getElementById('mastery-counter');
+            if (counter) {
+                counter.textContent = `${masteredIds.size} / ${vocabularyData.length}`;
+            }
+        }
+
+        function togglePhonetics() {
+            showPhonetics = !showPhonetics;
+            const btn = document.getElementById('btn-phonetics');
+            if (btn) {
+                btn.innerHTML = showPhonetics
+                    ? '<i class="fa-solid fa-eye-slash ml-1 text-[#cc5a24]"></i> إخفاء الرموز الصوتية والترجمة'
+                    : '<i class="fa-solid fa-spell-check ml-1 text-[#cc5a24]"></i> إظهار الرموز الصوتية والنطق بالحروف';
+            }
+            renderWorksheetCards();
+        }
+
+        // ============================================================================
+        // 4. AUTO-PLAY FULL LESSON SEQUENCER
+        // ============================================================================
+        function updateAutoPlayButtonUI() {
+            const btn = document.getElementById('btn-autoplay');
+            const icon = document.getElementById('autoplay-icon');
+            const txt = document.getElementById('autoplay-text');
+            if (!btn || !icon || !txt) return;
+
+            if (isAutoPlaying) {
+                btn.className = 'bg-red-600 hover:bg-red-700 text-white font-bold px-4 py-2 rounded-xl text-xs sm:text-sm flex items-center gap-2 shadow transition';
+                icon.className = 'fa-solid fa-circle-stop text-base animate-pulse';
+                txt.textContent = 'إيقاف التشغيل التلقائي';
+            } else {
+                btn.className = 'bg-[#cc5a24] hover:bg-[#b04919] text-white font-bold px-4 py-2 rounded-xl text-xs sm:text-sm flex items-center gap-2 shadow transition active:scale-95';
+                icon.className = 'fa-solid fa-circle-play text-base';
+                txt.textContent = 'تشغيل الدرس كاملاً';
+            }
+        }
+
+        function toggleAutoPlayLesson() {
+            if (isAutoPlaying) {
+                stopAllAudio();
+                return;
+            }
+            switchTab('sheet');
+            isAutoPlaying = true;
+            updateAutoPlayButtonUI();
+            runAutoPlaySequence(0);
+        }
+
+        function runAutoPlaySequence(index) {
+            if (!isAutoPlaying || index >= vocabularyData.length) {
+                stopAllAudio();
+                return;
+            }
+            const item = vocabularyData[index];
+            const cardEl = document.getElementById(`vocab-card-${item.id}`);
+            if (cardEl) {
+                cardEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+            markMastered(item.id);
+
+            speakBritishText(
+                item.word,
+                `الدرس التلقائي (${item.id}/12): الكلمة — ${item.meaning}`,
+                currentSpeed,
+                item.id,
+                false,
+                () => {
+                    if (!isAutoPlaying) return;
+                    autoPlayTimeout = setTimeout(() => {
+                        if (!isAutoPlaying) return;
+                        speakBritishText(
+                            item.sentence,
+                            `الدرس التلقائي (${item.id}/12): الجملة — ${item.sentenceAr}`,
+                            currentSpeed,
+                            item.id,
+                            true,
+                            () => {
+                                if (!isAutoPlaying) return;
+                                autoPlayTimeout = setTimeout(() => {
+                                    runAutoPlaySequence(index + 1);
+                                }, 750);
+                            }
+                        );
+                    }, 550);
+                }
+            );
+        }
+
+        // ============================================================================
+        // 5. NAVIGATION TABS (SHEET / FLASHCARDS / LISTEN GAME / EXAM)
+        // ============================================================================
+        function switchTab(tabName) {
+            stopAllAudio();
+            const views = ['sheet', 'flashcards', 'listenGame', 'exam'];
+            views.forEach(v => {
+                const viewEl = document.getElementById(`view-${v}`);
+                const tabBtn = document.getElementById(`tab-${v}`);
+                if (viewEl) viewEl.classList.add('hidden');
+                if (tabBtn) {
+                    if (v === 'exam') {
+                        tabBtn.className = 'tab-btn bg-amber-500 hover:bg-amber-600 text-white font-bold px-3.5 py-2 rounded-xl text-xs sm:text-sm flex items-center gap-2 shadow-sm transition';
+                    } else {
+                        tabBtn.className = 'tab-btn bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold px-3.5 py-2 rounded-xl text-xs sm:text-sm flex items-center gap-2 transition';
+                    }
+                }
+            });
+
+            const activeView = document.getElementById(`view-${tabName}`);
+            const activeBtn = document.getElementById(`tab-${tabName}`);
+            if (activeView) activeView.classList.remove('hidden');
+            if (activeBtn) {
+                activeBtn.className = 'tab-btn bg-[#718944] text-white font-bold px-3.5 py-2 rounded-xl text-xs sm:text-sm flex items-center gap-2 shadow-sm transition';
+            }
+
+            if (tabName === 'flashcards') renderFlashcard();
+            if (tabName === 'listenGame') startNewListenRound();
+            if (tabName === 'exam' && examQuestions.length === 0) initExam();
+        }
+
+        // ============================================================================
+        // 6. FLASHCARDS MODE
+        // ============================================================================
+        function renderFlashcard() {
+            const item = vocabularyData[currentFlashcardIndex];
+            if (!item) return;
+
+            document.getElementById('fc-counter').textContent = `${currentFlashcardIndex + 1} / ${vocabularyData.length}`;
+            document.getElementById('fc-illustration').innerHTML = item.svg;
+            document.getElementById('fc-word').textContent = item.word;
+            document.getElementById('fc-ipa').textContent = `${item.ipa} (${item.arabicPhonetic})`;
+            document.getElementById('fc-meaning').textContent = item.meaning;
+            document.getElementById('fc-sentence').innerHTML = `${item.sentenceParts[0]}<span class="text-[#cc5a24] font-black underline">${item.sentenceParts[1]}</span>${item.sentenceParts[2]}`;
+            document.getElementById('fc-sentence-ar').textContent = item.sentenceAr;
+
+            const answerArea = document.getElementById('fc-answer-area');
+            if (answerArea) {
+                answerArea.style.opacity = showFcMeaning ? '1' : '0.08';
+            }
+        }
+
+        function speakCurrentFlashcardWord() {
+            const item = vocabularyData[currentFlashcardIndex];
+            if (item) speakBritishText(item.word, `نطق الكلمة: ${item.meaning}`);
+        }
+
+        function speakCurrentFlashcardSentence() {
+            const item = vocabularyData[currentFlashcardIndex];
+            if (item) speakBritishText(item.sentence, `نطق الجملة: ${item.sentenceAr}`);
+        }
+
+        function toggleFlashcardMeaning() {
+            showFcMeaning = !showFcMeaning;
+            renderFlashcard();
+        }
+
+        function nextFlashcard() {
+            currentFlashcardIndex = (currentFlashcardIndex + 1) % vocabularyData.length;
+            renderFlashcard();
+            speakCurrentFlashcardWord();
+        }
+
+        function prevFlashcard() {
+            currentFlashcardIndex = (currentFlashcardIndex - 1 + vocabularyData.length) % vocabularyData.length;
+            renderFlashcard();
+            speakCurrentFlashcardWord();
+        }
+
+        // ============================================================================
+        // 7. LISTEN & CHOOSE GAME
+        // ============================================================================
+        function startNewListenRound() {
+            const feedback = document.getElementById('listen-feedback');
+            if (feedback) feedback.innerHTML = '';
+
+            const shuffled = [...vocabularyData].sort(() => Math.random() - 0.5);
+            const choices = shuffled.slice(0, 4);
+            listenTarget = choices[Math.floor(Math.random() * choices.length)];
+            listenModeSentence = Math.random() > 0.45;
+
+            const choicesEl = document.getElementById('listen-choices');
+            if (choicesEl) {
+                choicesEl.innerHTML = choices.map(item => `
+                    <button onclick="checkListenChoice(${item.id}, this)" class="bg-slate-50 hover:bg-amber-50 border-2 border-slate-200 hover:border-[#cc5a24] rounded-2xl p-4 flex items-center gap-4 transition text-left shadow-sm">
+                        <div class="w-20 h-16 bg-white rounded-xl border border-slate-200 flex items-center justify-center p-1 shrink-0">
+                            ${item.svg}
+                        </div>
+                        <div class="flex-1">
+                            <div class="font-en font-black text-lg text-slate-800">${item.word}</div>
+                            <div class="text-xs font-bold text-slate-500" dir="rtl">${item.meaning}</div>
+                            <div class="font-en text-xs text-slate-600 mt-1">${item.sentence}</div>
+                        </div>
+                    </button>
+                `).join('');
+            }
+
+            playListenGamePrompt(1.0);
+        }
+
+        function playListenGamePrompt(rate = 1.0) {
+            if (!listenTarget) return;
+            const textToSpeak = listenModeSentence ? listenTarget.sentence : listenTarget.word;
+            speakBritishText(textToSpeak, 'استمع واختر البطاقة الصحيحة', rate);
+        }
+
+        function checkListenChoice(selectedId, btnEl) {
+            if (!listenTarget) return;
+            const feedback = document.getElementById('listen-feedback');
+            if (selectedId === listenTarget.id) {
+                listenScore += 10;
+                document.getElementById('listen-score').textContent = listenScore;
+                btnEl.classList.add('border-green-600', 'bg-green-50');
+                if (feedback) {
+                    feedback.innerHTML = `<span class="text-green-700">🎉 إجابة صحيحة ممتازة! (${listenTarget.word} = ${listenTarget.meaning})</span>`;
+                }
+                setTimeout(startNewListenRound, 1300);
+            } else {
+                btnEl.classList.add('border-red-500', 'bg-red-50');
+                if (feedback) {
+                    feedback.innerHTML = `<span class="text-red-600">❌ حاول مرة أخرى! استمع جيداً للنطق البريطاني.</span>`;
+                }
+                playListenGamePrompt(0.75);
+            }
+        }
+
+        // ============================================================================
+        // 8. GRADE 6 CENTRAL EXAM SIMULATOR
+        // ============================================================================
+        function initExam() {
+            examIndex = 0;
+            examScore = 0;
+            examQuestions = [...vocabularyData].sort(() => Math.random() - 0.5);
+            document.getElementById('exam-question-area').classList.remove('hidden');
+            document.getElementById('exam-result-area').classList.add('hidden');
+            renderExamQuestion();
+        }
+
+        function renderExamQuestion() {
+            const currentQ = examQuestions[examIndex];
+            if (!currentQ) return;
+
+            document.getElementById('exam-q-progress').textContent = `${examIndex + 1} / ${examQuestions.length}`;
+            document.getElementById('exam-illustration').innerHTML = currentQ.svg;
+
+            const blankSentence = `${currentQ.sentenceParts[0]}<span class="text-[#cc5a24] underline px-2">_______</span>${currentQ.sentenceParts[2]}`;
+            document.getElementById('exam-q-prompt').innerHTML = blankSentence;
+            document.getElementById('exam-q-hint').textContent = `المعنى المطلوب: (${currentQ.meaning}) — ${currentQ.sentenceAr}`;
+
+            const distractors = vocabularyData
+                .filter(v => v.id !== currentQ.id)
+                .sort(() => Math.random() - 0.5)
+                .slice(0, 3);
+            const options = [currentQ, ...distractors].sort(() => Math.random() - 0.5);
+
+            const optionsContainer = document.getElementById('exam-options');
+            optionsContainer.innerHTML = options.map((opt, idx) => {
+                const letters = ['A', 'B', 'C', 'D'];
+                return `
+                    <button onclick="selectExamOption('${opt.word.replace(/'/g, "\\'")}', this)" class="exam-opt-btn bg-white hover:bg-amber-50 border-2 border-slate-200 hover:border-[#718944] rounded-2xl p-4 flex items-center justify-between transition shadow-sm">
+                        <div class="flex items-center gap-3">
+                            <span class="w-8 h-8 rounded-xl bg-slate-100 font-en font-black text-sm text-slate-700 flex items-center justify-center">${letters[idx]}</span>
+                            <span class="font-en font-black text-lg text-slate-800">${opt.word}</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-xs font-bold text-slate-400">${opt.ipa}</span>
+                            <span onclick="event.stopPropagation(); speakBritishText('${opt.word.replace(/'/g, "\\'")}', 'نطق الكلمة: ${opt.word.replace(/'/g, "\\'")}')" class="w-8 h-8 rounded-lg bg-amber-50 hover:bg-[#cc5a24] text-[#cc5a24] hover:text-white flex items-center justify-center transition" title="استمع لنطق الكلمة">
+                                <i class="fa-solid fa-volume-high text-xs"></i>
+                            </span>
+                        </div>
+                    </button>
+                `;
+            }).join('');
+
+            document.getElementById('exam-feedback-bar').classList.add('hidden');
+        }
+
+        function speakExamQuestion() {
+            const currentQ = examQuestions[examIndex];
+            if (currentQ) {
+                speakBritishText(currentQ.sentence, `سؤال الاختبار المركزي (${examIndex + 1})`);
+            }
+        }
+
+        function selectExamOption(selectedWord, btnEl) {
+            const currentQ = examQuestions[examIndex];
+            if (!currentQ) return;
+
+            const allBtns = document.querySelectorAll('.exam-opt-btn');
+            allBtns.forEach(b => b.disabled = true);
+
+            const feedbackBar = document.getElementById('exam-feedback-bar');
+            const feedbackText = document.getElementById('exam-feedback-text');
+            feedbackBar.classList.remove('hidden');
+
+            const isCorrect = selectedWord === currentQ.word;
+            if (isCorrect) {
+                examScore++;
+                btnEl.classList.replace('border-slate-200', 'border-green-600');
+                btnEl.classList.add('bg-green-50');
+                feedbackBar.className = 'p-4 rounded-2xl border-2 border-green-500 bg-green-50 flex flex-col sm:flex-row items-center justify-between gap-4';
+                feedbackText.innerHTML = `<span class="text-green-800">✅ أحسنت يا بطل! الإجابة الصحيحة هي <strong class="font-en">${currentQ.word}</strong> (${currentQ.meaning}).</span>`;
+            } else {
+                btnEl.classList.replace('border-slate-200', 'border-red-500');
+                btnEl.classList.add('bg-red-50');
+                feedbackBar.className = 'p-4 rounded-2xl border-2 border-red-400 bg-red-50 flex flex-col sm:flex-row items-center justify-between gap-4';
+                feedbackText.innerHTML = `<span class="text-red-800">❌ الإجابة الصحيحة هي <strong class="font-en">${currentQ.word}</strong> (${currentQ.meaning}).</span>`;
+            }
+
+            document.getElementById('exam-q-prompt').innerHTML = `${currentQ.sentenceParts[0]}<span onclick="speakWordById(${currentQ.id})" title="اضغط لسماع نطق الكلمة" class="cursor-pointer text-green-700 hover:text-[#cc5a24] font-black underline inline-flex items-center gap-1">${currentQ.sentenceParts[1]} <i class="fa-solid fa-volume-high text-sm"></i></span>${currentQ.sentenceParts[2]}`;
+            speakBritishText(currentQ.sentence, `الإجابة النموذجية: ${currentQ.word}`);
+        }
+
+        function nextExamQuestion() {
+            examIndex++;
+            if (examIndex >= examQuestions.length) {
+                document.getElementById('exam-question-area').classList.add('hidden');
+                document.getElementById('exam-result-area').classList.remove('hidden');
+                document.getElementById('exam-final-score').textContent = `الدرجة النهائية: ${examScore} من ${examQuestions.length} (${Math.round((examScore / examQuestions.length) * 100)}%)`;
+            } else {
+                renderExamQuestion();
+            }
+        }
+
+        // ============================================================================
+        // 9. SPEAKING COACH MODAL (SPEECH RECOGNITION)
+        // ============================================================================
+        function openPracticeModal(id) {
+            practiceTarget = vocabularyData.find(v => v.id === id);
+            if (!practiceTarget) return;
+
+            document.getElementById('prac-word').textContent = practiceTarget.word;
+            document.getElementById('prac-ipa').textContent = `${practiceTarget.ipa} — ${practiceTarget.meaning}`;
+            document.getElementById('prac-sentence').textContent = practiceTarget.sentence;
+            document.getElementById('prac-status').textContent = 'اضغط على الميكروفون وانطق الكلمة بالإنجليزية';
+            document.getElementById('prac-result').classList.add('hidden');
+            document.getElementById('practice-modal').classList.remove('hidden');
+
+            speakPracticeTarget(1.0);
+        }
+
+        function closePracticeModal() {
+            document.getElementById('practice-modal').classList.add('hidden');
+        }
+
+        function speakPracticeTarget(rate = 1.0) {
+            if (!practiceTarget) return;
+            speakBritishText(practiceTarget.word, `استمع وتدرب: ${practiceTarget.word}`, rate);
+        }
+
+        function startSpeechRecognition() {
+            if (!practiceTarget) return;
+            const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+            const statusEl = document.getElementById('prac-status');
+            const resultEl = document.getElementById('prac-result');
+            const micBtn = document.getElementById('btn-start-mic');
+
+            if (!SpeechRecognition) {
+                resultEl.classList.remove('hidden');
+                resultEl.className = 'p-3.5 rounded-2xl text-sm font-bold bg-amber-50 text-amber-800 border border-amber-300';
+                resultEl.textContent = 'متصفحك الحالي لا يدعم التعرف الصوتي المباشر، استمع للنطق البريطاني وكرره بصوتك!';
+                speakPracticeTarget(0.8);
+                return;
+            }
+
+            const recognition = new SpeechRecognition();
+            recognition.lang = 'en-GB';
+            recognition.interimResults = false;
+            recognition.maxAlternatives = 3;
+
+            micBtn.classList.add('animate-pulse', 'ring-4', 'ring-orange-300');
+            statusEl.textContent = '🎙️ جاري الاستماع لنطقك الآن... انطق الكلمة!';
+            resultEl.classList.add('hidden');
+
+            recognition.onresult = (event) => {
+                micBtn.classList.remove('animate-pulse', 'ring-4', 'ring-orange-300');
+                const transcript = event.results[0][0].transcript.toLowerCase().trim().replace(/[.!?]/g, '');
+                const targetClean = practiceTarget.word.toLowerCase().trim();
+
+                resultEl.classList.remove('hidden');
+                if (transcript.includes(targetClean) || targetClean.includes(transcript)) {
+                    resultEl.className = 'p-3.5 rounded-2xl text-sm font-bold bg-green-100 text-green-800 border border-green-300';
+                    resultEl.innerHTML = `🌟 نطق ممتاز متقن 100%! سمعتك تقول: "<span class="font-en">${transcript}</span>"`;
+                    markMastered(practiceTarget.id);
+                } else {
+                    resultEl.className = 'p-3.5 rounded-2xl text-sm font-bold bg-amber-100 text-amber-900 border border-amber-300';
+                    resultEl.innerHTML = `سمعتك تقول: "<span class="font-en">${transcript}</span>" — حاول مرة أخرى واستمع للنطق البطيء!`;
+                }
+                statusEl.textContent = 'اضغط على الميكروفون للمحاولة مرة أخرى';
+            };
+
+            recognition.onerror = () => {
+                micBtn.classList.remove('animate-pulse', 'ring-4', 'ring-orange-300');
+                statusEl.textContent = 'لم نتمكن من سماع الصوت بوضوح، اضغط على الميكروفون وحاول مجدداً.';
+            };
+
+            recognition.start();
+        }
+
+        // ============================================================================
+        // 10. INITIALIZE APP ON LOAD
+        // ============================================================================
+        window.addEventListener('DOMContentLoaded', () => {
+            renderWorksheetCards();
+            renderFlashcard();
+        });
+    </script>
+</body>
+</html>
